@@ -2,17 +2,17 @@ import computerCover from "./assets/computer-cover.jpg";
 import profileImg from "./assets/ari-profile.jpg";
 import secondCover from "./assets/secondStock.jpg";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import {
-  SiTailwindcss,
-  SiReact,
-  SiJavascript,
-  SiTypescript,
-  SiExpress,
-  SiReactquery,
-  SiPostgresql,
-  SiMysql,
-} from "react-icons/si";
-import { TbSql } from "react-icons/tb";
+// import {
+//   SiTailwindcss,
+//   SiReact,
+//   SiJavascript,
+//   SiTypescript,
+//   SiExpress,
+//   SiReactquery,
+//   SiPostgresql,
+//   SiMysql,
+// } from "react-icons/si";
+// import { TbSql } from "react-icons/tb";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 type parallaxLayer = (prop: { offset: number; speed?: number }) => JSX.Element;
