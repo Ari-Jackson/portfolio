@@ -2,6 +2,17 @@ import computerCover from "./assets/computer-cover.jpg";
 import profileImg from "./assets/ari-profile.jpg";
 import secondCover from "./assets/secondStock.jpg";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import {
+  SiTailwindcss,
+  SiReact,
+  SiJavascript,
+  SiTypescript,
+  SiExpress,
+  SiReactquery,
+  SiPostgresql,
+  SiMysql,
+} from "react-icons/si";
+import { TbSql } from "react-icons/tb";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 type parallaxLayer = (prop: { offset: number; speed?: number }) => JSX.Element;
@@ -19,10 +30,43 @@ export default function App() {
         <NameCard offset={0} />
         <ParallaxLayer offset={0.5}>
           <img
-            src={secondCover}
             alt="Desk with macbook"
-            className="min-w-screen -z-20 mt-24  h-full brightness-50 md:h-auto md:brightness-75"
+            className="min-w-screen -z-20 mt-24  h-full brightness-50 md:brightness-75 lg:h-auto"
+            src={secondCover}
           />
+        </ParallaxLayer>
+        <ParallaxLayer offset={0.9} speed={0.2}>
+          <div className="text-center md:px-40 lg:px-64">
+            <h1 className="font-heading-font mb-2 text-4xl font-bold tracking-wider text-white lg:text-left">
+              Skills
+            </h1>
+            <div className="flex justify-between">
+              {/* <div className="rounded-full bg-sky-600 p-5">
+                <SiTypescript className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiJavascript className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiReact className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiTailwindcss className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiExpress className="h-12 w-12 p-2 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiPostgresql className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <SiMysql className="h-12 w-12 text-white" />
+              </div>
+              <div className="rounded-full bg-sky-600 p-5">
+                <TbSql className="h-12 w-12 text-white" />
+              </div> */}
+            </div>
+          </div>
         </ParallaxLayer>
         <AboutMe offset={0.45} speed={1} />
         <FooterAndContact offset={1.75} />
@@ -56,24 +100,29 @@ const AboutMe: parallaxLayer = ({ offset, speed }) => {
           <div className="absolute -top-28 mb-32 h-60 w-60 rounded-full border-8 border-white">
             <img src={profileImg} className="rounded-full" />
           </div>
-          <div className=" z-20 mt-36 h-full w-full md:my-32">
+          <div className=" z-20 mt-36 h-full w-full md:mb-10">
             <div className="justify-self-start">
               <h1 className="font-heading-font pb-5 text-center text-4xl font-bold tracking-wide md:pb-10 md:text-left md:tracking-widest">
                 ABOUT ME
               </h1>
               <div className="flex flex-col space-y-5 font-text md:flex-row md:space-x-10 md:space-y-0">
                 <p className="w-full">
-                  I'm an aspiring software developer, interested in making in
-                  impact on the way we learn and grow. Growing up I've always
-                  has a passion for computers and technology, but being one of
-                  two children to an single immigrant mother meant we often
-                  without the shinier newer things.
+                  My journey into software engineering began when I first
+                  started to manage my ADHD as an adult, apart from my family. I
+                  was determined to prove that I wasn't just lazy and
+                  irresponsible and that what I really needed were the right
+                  tools.I started by building simple, customized, apps with
+                  Notion and quickly developed a passion for building systems
+                  that genuinely make an impact.
                 </p>
                 <p className="w-full">
-                  I'm passionate about working on projects that support all
-                  learners along their journey. Weather it's by helping future
-                  developers begin their tech journey or by building tools that
-                  make every learning journey possible.
+                  I decided to learn how to create web apps to help individuals
+                  like myself and anyone who wants to move faster without
+                  working harder. My passion for using tech to improve
+                  efficiency has followed me across my positions, improving
+                  performance for myself and my teams. Using Typescript and
+                  React, I build apps that help me genuinely solve problems, and
+                  understand how to measure and build on that success.
                 </p>
               </div>
             </div>
@@ -91,7 +140,7 @@ const FooterAndContact: parallaxLayer = ({ offset }) => {
         <footer className="z-20 -mt-24 flex w-full flex-col items-center justify-center bg-white pt-10 font-text md:-mt-0 md:h-60  md:flex-row md:items-start md:space-x-40">
           <div className="flex flex-col justify-center space-y-5">
             <h1 className=" font-heading text-xl tracking-widest">
-              WHATS NEXT?
+              WHAT'S NEXT?
             </h1>
             <div className="flex justify-between">
               <a href="mailto:arijackson@pursuit.org" target="_blank">
@@ -109,11 +158,11 @@ const FooterAndContact: parallaxLayer = ({ offset }) => {
             </div>
             <h1 className="text-center font-heading">Let's connect!</h1>
           </div>
-          <div className="flex flex-col justify-center space-y-5 py-5">
-            <button className="rounded-md border px-5 py-3 lg:hover:bg-gray-300 lg:hover:text-black">
+          <div className="flex flex-col items-center space-y-5 py-5">
+            <button className="rounded-md border px-5 py-3 lg:hover:bg-gray-400 lg:hover:text-white">
               Download My Full Resume
             </button>
-            <p>© 2023 by Ari Jackson with ❤️</p>
+            <p>© 2023. Made by Ari with ❤️</p>
           </div>
         </footer>
       </ParallaxLayer>
